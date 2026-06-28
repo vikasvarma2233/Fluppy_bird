@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,bodY{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.game{
+    height: 90%;
+    width: 80%;
+   overflow: hidden;
+    background-color: lightskyblue;
+    position: relative;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.bird-png{
+    height: 50px;
+    position: absolute;
+}
+
+
+.pipe{
+    width: 40px;
+    background-color: green;
+    position: absolute;
+}
+
+#score{
+  align-self: flex-start;
+
+
+  margin-left: 200px;
+}
+
+#over{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.494);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h1{
+    font-size: 4rem;
+    color: rgb(243, 14, 14);
+    font-weight: 900;
+}
+
+#res{
+    padding: 10px 23px;
+    background-color: red;
+    border-radius: 8px;
+    cursor: pointer;
+}
