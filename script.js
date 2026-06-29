@@ -12,13 +12,28 @@ let gravity = 2;
 let gameRunning = true;
 let sco = 0;
 
+
+
+const jump = document.getElementById("jump");
+const hit = document.getElementById("hit");
+
+// document.addEventListener("keydown", (e) => {
+//     if (e.code === "Space") {
+      
+//     }
+// });
+
+// function gameOver() {
+//     hit.play();
+// }
+
 // GAME OVER FUNCTION
 let sc = setInterval(()=>{
      score.textContent = ` Score :${sco++}`
 },1000)
 function gameOver() {
     if (!gameRunning) return;
-
+     hit.play();
     gameRunning = false;
 
     finaltx.textContent =  ` Score :${sco}`
@@ -64,6 +79,8 @@ document.addEventListener("keydown", (e) => {
 
     if (e.code === "Space") {
         birdTop -= 50;
+          jump.currentTime = 0; // Restart sound if pressed repeatedly
+        jump.play();
     }
 
 });
